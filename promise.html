@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // syntax
+        // let promise=new promise((resolve, reject) =>{
+        //     let success = true; //simulat the success
+        //     if(success)resolve("task comp");
+        //     else reject("failed")
+        // })
+
+        // Promise
+        // .then((reselt) => console.log("reselt")) //on success
+        // .catch((error) => console.log("error")) //on faileor
+
+
+        // arrow function
+        function normal(){
+            console.log("norm function");
+        }
+         
+        const arrowf = (a,b) =>{
+            let c=a+b;
+            console.log("arrow= ",c);
+        }
+        normal();
+        arrowf(3,5);
+
+
+        let mypromise = new Promise((resolve,reject) =>{
+            let success=true;
+            
+            
+            if(success) 
+            {resolve("task comp");
+        }
+            else 
+            {reject("youll fail");
+    }
+        })
+
+        mypromise.then((result)=>
+            console.log(result)
+        )
+    .catch((error)=>console.log(error))
+
+    // closures
+
+    function outer(outervar){
+        return function init(){
+            console.log(outervar)
+        }
+    }
+
+    const callf = outer("yellloooo!!!!");
+    callf();
+
+    </script>
+</body>
+</html>

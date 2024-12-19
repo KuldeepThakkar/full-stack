@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function div(num1, num2){
+        try{
+           if(num2 == 0){
+            throw new Error(" cannot divied by");
+           }
+            let resu = num1/num2
+            console.log("result= ",resu)
+        }
+
+        catch(error){
+            console.log(Error)
+            console.log(" Error= ",error.message);
+        }
+    }
+    function fatch(){
+        let data= false;
+        try{
+           if(data == true){
+            throw new Error(" dont have data dummy");
+           }
+           else{
+            throw new Error(" have nothing ")
+           }
+
+           
+            console.log("result= ",fatch)
+        }
+
+        catch(error){
+            console.log(Error)
+            console.log(" Error= ",error.message);
+        }
+    }
+    
+
+    // custom error
+      function createArror(message){
+        let error= new Error(message)
+        error.name="age error"                                     
+        return error;
+
+      }
+
+    function cage(age){
+        if(age < 18){
+            throw  createArror(" not for vote");
+
+           }
+           console.log("can vote")
+
+        }
+        try{
+           cage(16);  
+        }
+
+        catch(error){
+            if(error.name === "age error"){
+                console.log("custom error= "+error.name + "=" +error.message)
+            }
+            else{console.log("unknoewn error")}
+            
+        }
+    
+
+    </script>
+
+</body>
+</html>

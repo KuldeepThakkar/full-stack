@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="10">
+
+        <title>doc 3</title>
+        <style>
+            /* body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            } */
+            #output {
+                margin-top: 10px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+<body>
+    <h1 id="heading1">heasing</h1>
+    <p class="lol"  onmouseenter="parac2()"  onmouseleave="parac3()" >kokokokok</p>
+    <p class="lol"  onmouseenter="parac2()"  onmouseleave="parac3()">kokokokok</p>
+    <p class="lol"  onmouseenter="parac2()"  onmouseleave="parac3()">kokokokok</p>
+    <p class="lol"  onmouseenter="parac2()"  onmouseleave="parac3()">kokokokok</p> 
+    <p class="lol"  onmouseenter="parac2()"  onmouseleave="parac3()">kokokokok</p>
+
+     <label for="textInput">Enter some text:</label>
+     <input type="text" id="textInput" placeholder="Type something here...">
+     <button id="submitButton">Submit</button>
+     <div id="output"></div>
+    <button onclick="parac()" >button/button</button>
+    <br>
+    <!-- <label for="Input">Enter some text:</label> -->
+   
+     <input type="text" id="Input1" onkeydown="change()" placeholder="Type something here... it'll be in side">
+     <span id="sp"></span>
+    <br>
+     <input type="text" id="Input2" >
+     <button id="btn1" onclick="appen()">click me</button>
+     <h6 id="he1"></h6>
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            
+            var inputText = document.getElementById('textInput').value;
+           
+            document.getElementById('output').innerText = inputText;
+        });
+
+         document.getElementById('heading1').innerHTML="yellooooo";
+        
+        function parac()
+        {
+
+          let y=  document.getElementsByClassName('lol');
+          for(i=0;i<=y.length;i++)
+          {
+          y[i].style.backgroundColor="red";
+          }
+         
+        
+        }
+          function parac2(){
+          let y=  document.getElementsByClassName('lol');
+          for(i=0;i<=y.length;i++)
+          {
+          y[i].style.backgroundColor="blue";
+          }}
+
+          function parac3(){
+          let z=  document.getElementsByClassName('lol');
+          for(i=0;i<=z.length;i++)
+          {
+          z[i].style.backgroundColor="orange";
+          }}
+
+        function idk(){
+            var a="djdkaj";
+            document.getElementById('heading1').style.backgroundColor="red";
+            console.log(a)
+        }
+        function change(){
+
+            let inp = document.getElementById('Input1');
+            console.log(inp)
+            let out = document.getElementById('sp');
+            console.log(out)
+            let val = inp.value;
+            console.log(val)
+            out.innerHTML = val;
+        
+        }
+
+        function appen(){
+            let i3=document.getElementById("Input2")
+            let val=i3.value;
+            let e3=document.createElement("p");
+            e3.innerHTML=val;
+            let h1=document.document.getElementById("he1");
+            h1.appendChild(e3);
+        }
+
+let ptag = document.createElement("p");
+ptag.innerHTML="thisudioaus";
+let heas = document.getElementById("heading1")
+heas.appendChild(ptag);
+       
+    </script>
+</body>
+</html>

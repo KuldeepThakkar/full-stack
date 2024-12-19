@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="Input2" >
+    <button id="btn1" >click me</button>
+    <h6 id="he1"></h6>
+     // <img src="https://images.unsplash.com/photo-1734014937757-f39209af0579?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&/ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" id="img1" height="300px">  
+    
+    <script>
+         function appen(){
+            let i3=document.getElementById("Input2")
+            let val=i3.value;
+            
+            
+            let e3=document.createElement('p');
+            e3.style.backgroundColor="black";
+            e3.style.color="yellow";
+            e3.innerHTML=val;
+             
+            let checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+
+            let h1=document.getElementById("he1");
+            h1.appendChild(e3);
+            
+            
+        }
+
+        function cheb(){
+            let inp = document.getElementById('Input1');
+
+            i3.value='';
+            
+        }
+
+      
+        let btn=document.getElementById("btn1");
+        btn.addEventListener("click" , appen);
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h6 {
+            margin: 10px 0;
+        }
+        .task {
+            display: flex;
+            align-items: center;
+            background-color: black;
+            color: yellow;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .task input[type="checkbox"] {
+            margin-left: auto; /* Pushes the checkbox to the right */
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="Input2" placeholder="Enter a task">
+    <button id="btn1">Click Me</button>
+    <div id="he1"></div>
+
+    <script>
+        function appen() {
+            let i3 = document.getElementById("Input2");
+            let val = i3.value.trim();//trim remves space
+
+            if (val === '') {
+                alert('Please enter a task!');
+                return;
+            }
+
+            // Create a new task element
+            let taskDiv = document.createElement('div');
+            taskDiv.className = 'task';
+
+            // Create a paragraph for the task text
+            let taskText = document.createElement('p');
+            taskText.innerHTML = val;
+            taskText.style.margin = '0'; // Remove default margin
+
+            // Create a checkbox
+            let checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+
+            // Append the text and checkbox to the task div
+            taskDiv.appendChild(taskText);
+            taskDiv.appendChild(checkbox);
+
+            // Append the task div to the main container
+            let h1 = document.getElementById("he1");
+            h1.appendChild(taskDiv);
+
+            // Clear the input field
+            i3.value = '';
+        }
+
+        let btn = document.getElementById("btn1");
+        btn.addEventListener("click", appen);
+    </script>
+</body>
+</html> 

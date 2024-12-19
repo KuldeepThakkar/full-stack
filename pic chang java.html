@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Replacement Example</title>
+
+    <style>
+            body {
+            /* Set the background image here */
+            background-image: url('https://images.unsplash.com/photo-1734275689167-5f458aacde63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1N3x8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: repeat; /* Prevent the background from repeating */
+            transition: ease-in-out;
+        } 
+
+        img {
+            width: 300px; /* Set a width for the image */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 20px auto; /* Center the image */
+        }
+        button {
+            display: block;
+            margin: 10px auto; /* Center the buttons */
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Replacement Example</h1>
+    <img id="mainImage" src="https://images.unsplash.com/photo-1559981421-3e0c0d712e3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFuaW1lfGVufDB8fDB8fHww" alt="Original Image">
+    
+    <button onclick="replaceImage('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFuaW1lfGVufDB8fDB8fHww')">Replace with Image 1</button>
+    <button onclick="replaceImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFUeNwA80qb6BHftZnFoPvs8FYKiVRtTm6_w&s')">Replace with Image 2</button>
+    <button onclick="replaceImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB7YN3DZ4Nywami__xGt8MhGJKc0IoA2TYVg&s')">Replace with Image 3</button>
+
+    <script>
+        
+document.body.style.backgroundImage ="https://images.unsplash.com/photo-1731076274484-e3882b02d523?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8";
+        function replaceImage(newSrc) {
+            const imgElement = document.getElementById('mainImage');
+            imgElement.src = newSrc; // Change the source of the image
+        }
+    </script>
+  
+</body>
+</html>

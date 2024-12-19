@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+.container{
+margin-top: 50px;
+height: 800px;
+border: 1px solid red;
+position: relative;
+}
+.container1{
+margin-top: 30px;
+height: 1000px;
+border: 2px solid black;
+}
+.test {
+margin-left: 20px;
+height: 100px;
+width : 100px;
+text-align: center;
+}
+#test1{ margin-top: 50px;
+    position: absolute;
+    top: 70px;
+background-color: aqua;
+z-index: 3;
+}
+#test2{
+background-color: rgb(76, 0, 255);
+position: absolute;
+top: 70px;
+
+z-index: 1;
+}
+#test3{
+background-color: rgb(255, 0, 140);
+position: absolute;
+top: 90px;
+z-index: 10;
+}
+#test4{
+background-color: rgb(208, 255, 0);
+position: absolute;
+top: 100px;
+z-index: 1;
+}
+#test5{
+background-color: rgb(255, 0, 0);
+position: absolute;
+top: 50px;
+z-index: 1000;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="test" id="test1">1</div>
+<div class="test" id="test2">2</div>
+<div class="test" id="test3">3</div>
+<div class="test" id="test4">4</div>
+<div class="test" id="test5">5</div>
+</div>
+<div class="container1"></div>
+</body>
+</html>

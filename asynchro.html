@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="g"></h1>
+ <script>
+     
+    // function dd(){
+    //     let p=document.getElementById("g")
+    //     console.log("ashdkjashdjk")
+    // }
+    // setTimeout(function(){
+    //     console.log("hellp")
+    // },3000)
+
+    // setInterval(dd,3000);
+
+
+    // function task(callback){
+    //     setTimeout
+    //     (()=>{
+    //         console.log("some taskm is in time ");
+    //     callback();
+    //     },1000)
+        
+    // }
+
+    // function hello(){
+    //     console.log("yooo!!!!!!");
+
+    // }
+    
+    // function bye(){
+    //     console.log("bye???....///")
+    // }
+  
+    
+    // task(hello);
+    // task(bye);
+
+
+
+
+//     call back:- 
+//  function fname(callback){
+//     console.log("some other task")
+//     callback();
+//  }
+
+//  function callbackfname(){
+//     console.log("callback id\s called")
+//  } 
+
+
+//async
+ async function task(){
+    let tailer = new Promise((resolve,reject) => 
+{
+    setTimeout(()=> resolve("it is done go on take it"),3000)
+})
+let halwai = new Promise((resolve,reject) => 
+{
+    setTimeout(()=> resolve("ladoooo done go on take it"),5000)
+})
+
+ console.log("please wait for tailers clothes")
+
+ let tailerscloths= await tailer
+ console.log(" the cloths are ready as" + tailerscloths);
+ 
+ console.log("please wait for halwai")
+ 
+ let laduuu= await halwai
+ console.log(" the ladoo are ready as" + laduuu);
+ console.log[tailerscloths,laduuu]
+ }
+ console.log("task to be comp=")
+ let tasks =task()
+ tasks.then((value)=>console.log(value));
+ 
+
+
+
+// async function sd(){
+//     try{
+//         let data= await new Promise((resolve) => setTimeout(() => resolve("data fetched"), 2000));
+//         console.log(data);
+
+//     }
+//     catch(error){
+//         console.log(error )
+//     }
+// }
+//  sd(); 
+
+ </script>
+</body>
+</html>
